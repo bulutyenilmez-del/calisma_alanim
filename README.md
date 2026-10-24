@@ -18,6 +18,18 @@ Bu depo şimdilik bir **tasarım ve uygulama planıdır**. Donanım ve sistem ha
 - **Yaklaşım:** Hafif, modüler, okunabilir; gereksiz bağımlılıklardan kaçınan yapı
 - **Dil:** Bu depodaki açıklamalar, planlar ve kullanıcıya dönük metinler Türkçe olacak. Kod ve yapılandırma sözdizimi doğal olarak kendi dil kurallarını izleyebilir.
 
+## Uygulama başlatıcısı
+
+Super tuşuna basıldığında uygulama başlatıcısı açılacak. GNOME'daki tam ekran uygulama ızgarası kullanılmayacak; bunun yerine sade, koyu temalı ve ekranın ortasında açılan küçük bir pencere tercih edilecek.
+
+- Uygulamalar adları yazılarak aranabilecek ve sonuçlar yazdıkça filtrelenecek.
+- Sonuçlar arasında klavyeyle gezinilebilecek ve uygulama başlatılabilecek.
+- Esc tuşu pencereyi kapatacak.
+- Başlatıcı hızlı açılmalı, az kaynak tüketmeli ve gereksiz görsel efektlerden kaçınmalı.
+- Aday araçlar: `wofi` ve `bemenu`. Donanım ve bağımlılıklar göz önünde bulundurularak biri seçilecek; ikisini birden kurmak gerekmiyor.
+
+Super tuşunun doğrudan başlatıcıyı açması Sway yapılandırmasında uygulanıp test edilecek. Kesin tuş eşlemeleri, kurulum sırasında diğer kısayollarla çakışma olup olmadığı kontrol edilerek belirlenecek.
+
 ## Üst çubuğun yerleşimi
 
 Üst çubuk sabit olacak, otomatik gizlenmeyecek ve yaklaşık 32 piksel yüksekliğinde başlayacak. Görsel tasarım uygulama sırasında ekran çözünürlüğü ve okunabilirliğe göre ayarlanacak.
@@ -76,6 +88,7 @@ Her cihaz bu değerlerin tümünü sağlamayabilir; bulunmayan veriler uydurulma
 ## Olası araçlar
 
 - `waybar`: üst çubuk ve modüller
+- `wofi` veya `bemenu`: uygulama başlatıcısı için değerlendirilecek seçenekler
 - `playerctl` / MPRIS: medya bilgisi ve kontrolü
 - `/proc` ve `/sys`: işlemci, bellek ve ağ sayaçları için uygun arayüzler
 - `UPower` veya `/sys/class/power_supply`: pil verileri
@@ -87,13 +100,14 @@ Bunlar başlangıç adaylarıdır; kuruluma geçildiğinde T480 donanımında ge
 
 1. ThinkPad T480 edinildiğinde donanımı ve ekran çözünürlüğünü doğrula.
 2. Arch Linux ve Sway ortamını kur; temel ağ, ses, parlaklık ve pil erişimini test et.
-3. Waybar'ın sabit konumunu, yüksekliğini ve koyu temasını oluştur.
-4. Sol bölümde CPU, bellek ve anlık ağ hızlarını ekle.
-5. Orta bölümde Spotify kontrollerini ve **süre göstergelerinden açıkça ayrılmış saati** yerleştir.
-6. Sağ bölümde bağlantı, pil, parlaklık ve çalışma alanlarını ekle.
-7. Ağ ve pil ayrıntı panellerini ekle.
-8. Kaynak tüketimini, okunabilirliği, uzun parça adlarını ve eksik donanım verilerini test et.
-9. Kurulum notlarını ve yapılandırmaları bu depoda güncelle.
+3. Super tuşuyla açılan sade uygulama başlatıcısını yapılandır ve klavye kullanımını doğrula.
+4. Waybar'ın sabit konumunu, yüksekliğini ve koyu temasını oluştur.
+5. Sol bölümde CPU, bellek ve anlık ağ hızlarını ekle.
+6. Orta bölümde Spotify kontrollerini ve **süre göstergelerinden açıkça ayrılmış saati** yerleştir.
+7. Sağ bölümde bağlantı, pil, parlaklık ve çalışma alanlarını ekle.
+8. Ağ ve pil ayrıntı panellerini ekle.
+9. Kaynak tüketimini, okunabilirliği, uzun parça adlarını ve eksik donanım verilerini test et.
+10. Kurulum notlarını ve yapılandırmaları bu depoda güncelle.
 
 ## Tasarım ilkeleri
 
@@ -101,6 +115,7 @@ Bunlar başlangıç adaylarıdır; kuruluma geçildiğinde T480 donanımında ge
 - Sabit ve tutarlı yerleşim; gereksiz animasyon yok.
 - Düşük bellek ve işlemci tüketimi.
 - Gereksiz servis ve bağımlılıklardan kaçınma.
+- Klavye merkezli kullanım ve hızlı uygulama erişimi.
 - Anlık hız, toplam sayaç, saat ve müzik süresi gibi farklı kavramları görsel olarak ayırma.
 - Donanımın sunmadığı verileri varmış gibi göstermeme.
 - Proje notlarını ve açıklamalarını Türkçe tutma.
