@@ -1,6 +1,6 @@
 # Tasarım Notları ve Yapılacaklar
 
-Bu dosya, üst çubuk fikrinin uygulanabilir parçalara ayrılmış kontrol listesidir. Maddeler, gerçekten test edilip tamamlanana kadar tamamlanmış sayılmaz.
+Bu dosya, üst çubuk ve uygulama başlatıcısı fikrinin uygulanabilir parçalara ayrılmış kontrol listesidir. Maddeler, gerçekten test edilip tamamlanana kadar tamamlanmış sayılmaz.
 
 ## İlk kurulum
 
@@ -9,6 +9,16 @@ Bu dosya, üst çubuk fikrinin uygulanabilir parçalara ayrılmış kontrol list
 - [ ] Sway oturumunu ve temel giriş aygıtlarını doğrula
 - [ ] Ses, Wi-Fi, Bluetooth ve parlaklık kontrolünü test et
 - [ ] Pil bilgilerine erişilebildiğini kontrol et
+
+## Uygulama başlatıcısı
+
+- [ ] Super tuşuna basıldığında uygulama başlatıcısını aç
+- [ ] GNOME tarzı tam ekran uygulama ızgarası yerine küçük, koyu temalı ve ortalanmış bir pencere kullan
+- [ ] Uygulama adını yazarak arama ve sonuçları filtreleme işlevini doğrula
+- [ ] Sonuçlar arasında klavyeyle gezinmeyi ve uygulama başlatmayı test et
+- [ ] Esc tuşuyla başlatıcıyı kapat
+- [ ] Başlatıcının kaynak tüketimini ve açılma hızını ölç
+- [ ] Başlatıcı aracı olarak `wofi` veya `bemenu` seçeneklerini bağımlılık ve kullanım açısından karşılaştır; seçim yapmadan ikisini birden kurma
 
 ## Üst çubuk
 
