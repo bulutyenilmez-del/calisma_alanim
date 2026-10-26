@@ -96,6 +96,14 @@ Her cihaz bu değerlerin tümünü sağlamayabilir; bulunmayan veriler uydurulma
 
 Bunlar başlangıç adaylarıdır; kuruluma geçildiğinde T480 donanımında gerçekten gerekli ve uyumlu olanlar seçilecek. Her özellik için ayrı bir ağır bağımlılık eklemek yerine mümkün olduğunca basit çözümler tercih edilecek.
 
+## Sistem mimarisi ve açılış
+
+Sistem açılışı, init sistemi, ext4 ve NEPHELO açılış görseli için ayrı bir plan belgesi eklendi:
+
+- [Sistem mimarisi ve açılış planı](docs/sistem-mimarisi.md)
+
+**Önemli:** Initramfs’sız açılış henüz kesinleşmiş bir karar değil. `mkinitcpio` sorunları kolayca düzeltilebiliyorsa initramfs ile devam etmek daha pratik olabilir. Initramfs’sız yöntem yalnızca geri alınabilir bir deney olarak değerlendirilecek; çalışan kernel ve boot seçeneği korunacak.
+
 ## Uygulama sırası
 
 1. ThinkPad T480 edinildiğinde donanımı ve ekran çözünürlüğünü doğrula.
